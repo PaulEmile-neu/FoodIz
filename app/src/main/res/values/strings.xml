@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">foodTrex</string>
+    <string name="profile">Your Profile</string>
+    <string name="profile_title">Profile</string>
+    <string name="cart">Your Cart</string>
+    <string name="cart_title">Meals</string>
+    <string name="our_desert">Our desert</string>
+    <string name="our_dishes">Our dishes</string>
+    <string name="our_entries">Our entries</string>
+    <string name="name">Paul-Emile</string>
+    <string name="greeting">Welcome Back</string>
+    <string name="intro_string">get all our</string>
+    <string name="category_title">Category</string>
+    <string name="price_title">Price</string>
+    <string name="ingredients_title">Ingredients</string>
+    <string name="people_number">3 persons</string>
+    <string name="food_kalories">247 cals</string>
+    <string name="quantity_title">Quantity</string>
+    <string name="number_title">number</string>
+    <string name="remove_btn">remove</string>
+    <string name="add_btn">add</string>
+</resources>

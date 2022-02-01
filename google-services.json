@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "35029238018",
+    "project_id": "foodtrex-6d728",
+    "storage_bucket": "foodtrex-6d728.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35029238018:android:58168ace55e1bdb535021b",
+        "android_client_info": {
+          "package_name": "fr.isen.neu.foodtrex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35029238018-t1gaaj3tk6ahr4m1gll55gd37qtn7jgs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fr.isen.neu.foodtrex",
+            "certificate_hash": "6141035331754b44ab675a5a9aa6af2f4a4da1ad"
+          }
+        },
+        {
+          "client_id": "35029238018-j9qci1n4gb7vk8tbullp8obnil52sec1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8-hNg93S6hvPfRAJ7YGcGaridxeXr-gI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35029238018-j9qci1n4gb7vk8tbullp8obnil52sec1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
