@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import fr.isen.neu.foodtrex.databinding.ActivityHomeBinding
+import io.paperdb.Paper
 
 class HomeActivity : AppCompatActivity() {
 
@@ -14,6 +15,7 @@ class HomeActivity : AppCompatActivity() {
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Paper.init(this)
 
         // set on-click listener
         binding.entryId.setOnClickListener {

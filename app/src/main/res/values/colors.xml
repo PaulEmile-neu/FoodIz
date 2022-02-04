@@ -8,4 +8,5 @@
     <color name="darkGrey">#8F8F8F</color>
     <color name="yellow">#F4D49A</color>
     <color name="orange">#FBB9A4</color>
+    <color name="buttonDarken">#DC937C</color>
 </resources>

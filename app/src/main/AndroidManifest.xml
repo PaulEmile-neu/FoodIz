@@ -15,7 +15,7 @@
             android:name=".view.ShoppingCartActivity"
             android:exported="false" />
         <activity
-            android:name=".view.DishDetail"
+            android:name=".view.DishDetailActivity"
             android:exported="false" />
         <activity
             android:name=".view.CategoryActivity"

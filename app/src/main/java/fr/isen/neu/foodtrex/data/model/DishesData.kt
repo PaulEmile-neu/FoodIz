@@ -11,7 +11,7 @@ data class CategoryModel(val name_fr: String, val items: List<DishModel>) : Seri
 
 data class DishModel(
     val name_fr: String,
-    val image: List<String>,
+    val images: List<String>,
     val prices: List<PriceData>,
     val ingredients: List<IngredientData>
 ) : Serializable

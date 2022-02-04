@@ -51,15 +51,23 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="1dp"
             tools:itemCount="4"
-            tools:listitem="@layout/card_component"
+            tools:listitem="@layout/dish_card_component"
             />
 
 
     </LinearLayout>
 
 
-
 </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextDishes"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginTop="5sp"
+        android:backgroundTint="@color/buttonDarken"/>
 
 
 

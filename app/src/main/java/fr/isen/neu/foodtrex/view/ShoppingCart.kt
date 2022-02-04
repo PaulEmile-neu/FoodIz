@@ -6,15 +6,15 @@ import io.paperdb.Paper
 
 class ShoppingCart {
     companion object {
-        fun addItem(cartItem: CartItem) {
+        fun addItem(cartItem: CartItem,quantity:Int) {
             val cart = ShoppingCart.getCart()
 
             val targetItem = cart.singleOrNull { it.product.name_fr == cartItem.product.name_fr }
             if (targetItem == null) {
-                cartItem.quantity++
+                cartItem.quantity+=quantity
                 cart.add(cartItem)
             } else {
-                targetItem.quantity++
+                targetItem.quantity+=quantity
             }
             ShoppingCart.saveCart(cart)
         }
@@ -24,7 +24,7 @@ class ShoppingCart {
 
             val targetItem = cart.singleOrNull { it.product.name_fr == cartItem.product.name_fr }
             if (targetItem != null) {
-                if (targetItem.quantity > 0) {
+                if (targetItem.quantity > 1) {
                     targetItem.quantity--
                 } else {
                     cart.remove(targetItem)

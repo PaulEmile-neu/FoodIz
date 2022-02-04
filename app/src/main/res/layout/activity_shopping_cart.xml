@@ -1,10 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.ShoppingCartActivity">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <LinearLayout
+      android:id="@+id/emptyLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="450sp"
+      android:src="@drawable/empty_cart"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:text="Your Cart is Empty"
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:textSize="@dimen/_30sdp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:text="Order Now"
+        android:id="@+id/emptyCartButton"
+        android:layout_gravity="center"
+        android:layout_marginTop="10sp"
+        android:backgroundTint="@color/pinkColor"/>
+
+
+  </LinearLayout>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rv_shopping_cart"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="1dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="1dp"
+          tools:itemCount="4"
+          tools:listitem="@layout/cart_component"
+          />
+
+
+
+
+    </LinearLayout>
+
+  </ScrollView>
+
+  </LinearLayout>
