@@ -31,3 +31,8 @@ FoodIz contain a lot of features
 
 ## Demo
 [![FoodIz demo](https://res.cloudinary.com/marcomontalbano/image/upload/v1644835017/video_to_markdown/images/youtube--gkbkeNQg2Jk-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=gkbkeNQg2Jk "FoodIz demo")
+
+
+## Project conclusion
+
+this project and these courses allowed me to discover concepts in android that I did not master before. I also understood the needs of companies and the working method to adopt to satisfy them.
