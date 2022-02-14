@@ -20,12 +20,12 @@ I worked a lot on the design of the application to provide a nice application to
 
 ## Feature
 
-FoodIz contain a lot of features
-    The user can access different menus, he can check it's shopping cart and update it dynamically. He can also view it's last order in the profile section. 
+FoodIz contains a lot of features
 
-    The user can signUp on the app before sending the final order
-    The user can login and remain login in the app until he logout
-    The user can easily navigate in the application to order it's meal or access different activities
+    The user can access different menus, he can check it's shopping cart and update it dynamically. He can also view it's last order in the profile section. 
+    The user can signUp on the app before sending the final order.
+    The user can login and remain login in the app until he logout.
+    The user can easily navigate in the application to order it's meal or access different activities.
 
     The application was made to be the most intuitive and easy to use for the user 
 
