@@ -13,13 +13,17 @@ import fr.isen.neu.foodtrex.databinding.CartComponentBinding
 import fr.isen.neu.foodtrex.view.ShoppingCart
 import fr.isen.neu.foodtrex.view.ShoppingCartActivity
 
-
+/*------------------------------------------------- CartAdapter -----
+ |
+ |  Purpose: This adapter is used to manage the user's cart
+ |
+ *-------------------------------------------------------------------*/
 class CartAdapter(
     val cartData: List<CartItem>
 ) : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartAdapter.CartViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
         val binding = CartComponentBinding.inflate(LayoutInflater.from(parent.context))
         return CartViewHolder(binding)
     }
@@ -32,6 +36,11 @@ class CartAdapter(
         holder.bindItem(cartData[position])
     }
 
+    /*------------------------------------------------- CartViewHolder -----
+ |
+ |  Purpose: This class contains the logic to update the cart according the user's choice
+ |
+ *-------------------------------------------------------------------*/
     class CartViewHolder(val binding: CartComponentBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
@@ -40,6 +49,7 @@ class CartAdapter(
 
             var item = CartItem(cartItem.product)
 
+            //if we have no image to display from the api we set a default one
             if (cartItem.product.images[0].isEmpty()) {
                 R.drawable.entry
             } else {
@@ -52,29 +62,39 @@ class CartAdapter(
 
             binding.tvCartQuantity.text = cartItem.quantity.toString()
 
-                binding.btnRemove.setOnClickListener {
-                    var counter: Int = cartItem.quantity
 
-                    if (counter > 1) {
-                        counter -= 1
-                        Toast.makeText(itemView.context,"item removed",Toast.LENGTH_SHORT).show()
-                    } else {
-                        itemView.visibility = View.GONE
+            //used to remove article from the cart
+            binding.btnRemove.setOnClickListener {
+                var counter: Int = cartItem.quantity
 
-                    }
-
-                    cartItem.quantity = counter
-                    binding.tvCartQuantity.text = counter.toString()
-
-                    ShoppingCart.removeItem(item, itemView.context)
-
-                    if(ShoppingCart.getShoppingCartSize() == 0)
-                    {
-                        val activity : ShoppingCartActivity = itemView.context as ShoppingCartActivity
-                        activity.finishMe()
-                    }
+                if (counter > 1) {
+                    counter -= 1
+                    Toast.makeText(itemView.context, "item removed", Toast.LENGTH_SHORT).show()
+                } else {
+                    itemView.visibility = View.GONE
 
                 }
+
+                cartItem.quantity = counter
+                binding.tvCartQuantity.text = counter.toString()
+
+                ShoppingCart.removeItem(item, itemView.context)
+
+                //if the cart is empty we close if by default
+                if (ShoppingCart.getShoppingCartSize() == 0) {
+                    val activity: ShoppingCartActivity = itemView.context as ShoppingCartActivity
+                    activity.closeEmptyCart()
+                }
+
+            }
+
+            //default behaviours -- may be updated soon
+            binding.btnAdd.setOnClickListener {
+
+                Toast.makeText(itemView.context, "cannot add more", Toast.LENGTH_SHORT).show()
+
+            }
+
         }
     }
 }

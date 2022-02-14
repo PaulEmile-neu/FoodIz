@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fr.isen.neu.foodtrex" >
+    package="fr.isen.neu.foodtrex">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,7 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FoodTrex" >
+        android:theme="@style/Theme.FoodTrex">
+        <activity
+            android:name=".view.ProfileUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.FinalOrderActivity"
+            android:exported="false" />
         <activity
             android:name=".view.ShoppingCartActivity"
             android:exported="false" />
@@ -21,20 +27,11 @@
             android:name=".view.CategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".view.subCategory.DesertActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.subCategory.DishesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.subCategory.EntryActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".view.HomeActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

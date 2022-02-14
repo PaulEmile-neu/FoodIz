@@ -3,7 +3,6 @@ package fr.isen.neu.foodtrex.view.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
@@ -11,6 +10,13 @@ import fr.isen.neu.foodtrex.data.interfaces.ItemClickListener
 import fr.isen.neu.foodtrex.data.model.DishModel
 import fr.isen.neu.foodtrex.databinding.DishCardComponentBinding
 import fr.isen.neu.foodtrex.R
+
+
+/*------------------------------------------------- DishesAdapter -----
+ |
+ |  Purpose: This activity contain all the orders
+ |
+ *-------------------------------------------------------------------*/
 class DishesAdapter(
     private val dishesItemsData: List<DishModel>,
     private val itemClickListener: ItemClickListener
@@ -28,6 +34,8 @@ class DishesAdapter(
 
     override fun onBindViewHolder(holderDish: DishViewHolder, position: Int) {
         holderDish.binding.tvDishName.text = dishesItemsData[position].name_fr
+
+        //image management
         if(dishesItemsData[position].images[0].isEmpty())
         {
             R.drawable.entry
@@ -41,7 +49,7 @@ class DishesAdapter(
 
 
         holderDish.itemView.setOnClickListener{
-            itemClickListener.OnCardClickListener(dishesItemsData[position])
+            itemClickListener.onCardClickListener(dishesItemsData[position])
         }
 
     }
@@ -53,7 +61,6 @@ class DishesAdapter(
     //our ViewHolder inner class to help our adapter to bind data
     class DishViewHolder(val binding:DishCardComponentBinding): RecyclerView.ViewHolder(binding.root)
     {
-        val imageView: ImageView = binding.imgDish
         val textView: TextView = binding.tvDishName
 
     }

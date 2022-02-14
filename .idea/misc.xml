@@ -5,19 +5,28 @@
       <map>
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/drawable/ic_wave.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/drawable/switch_trck.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/drawable/switch_trck_inpupt.xml" value="0.157" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/drawable/switch_trck_input.xml" value="0.1" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/drawable/switch_trck_light.xml" value="0.157" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/drawable/switch_tumb.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout-v28/activity_login.xml" value="0.259375" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_category.xml" value="0.1" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_desert.xml" value="0.1" />
-        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_dish_detail.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_dish_detail.xml" value="0.2611111111111111" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_dishes.xml" value="0.1" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_entry.xml" value="0.1" />
-        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_home.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_final_order.xml" value="0.1" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_home.xml" value="0.4" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_login.xml" value="0.256198347107438" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_profil_user.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_profile_user.xml" value="0.12613981762917933" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_shopping_cart.xml" value="0.1" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/activity_user_management.xml" value="0.20697463768115942" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/card_component.xml" value="0.1" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/cart_component.xml" value="0.22" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/dish_card_component.xml" value="0.1" />
+        <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/layout/viewpager_images_adapter.xml" value="0.259375" />
         <entry key="..\:/Users/neupa/AndroidStudioProjects/foodTrex/app/src/main/res/menu/cart_menu.xml" value="0.1703125" />
       </map>
     </option>

@@ -4,9 +4,9 @@
     <color name="textColor">#ECE5EC</color>
     <color name="textColorDarken">#1A2E4C</color>
     <color name="pinkColor">#FB7192</color>
-    <color name="transparentColor">#00FFFFFF</color>
     <color name="darkGrey">#8F8F8F</color>
-    <color name="yellow">#F4D49A</color>
+    <color name="yellow">#E1C085</color>
     <color name="orange">#FBB9A4</color>
-    <color name="buttonDarken">#DC937C</color>
+    <color name="buttonDarken">#F39476</color>
+    <color name="loginColor">#E33F67</color>
 </resources>

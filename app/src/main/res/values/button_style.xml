@@ -6,7 +6,7 @@
     </style>
 
     <style name="button5">
-        <item name="cornerSize">50%</item>
+        <item name="cornerSize">25%</item>
     </style>
 
 

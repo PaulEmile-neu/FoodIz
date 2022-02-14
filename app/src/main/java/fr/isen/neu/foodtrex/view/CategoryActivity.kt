@@ -1,26 +1,32 @@
 package fr.isen.neu.foodtrex.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
+import fr.isen.neu.foodtrex.R
 import fr.isen.neu.foodtrex.data.interfaces.ItemClickListener
 import fr.isen.neu.foodtrex.data.model.DishModel
 import fr.isen.neu.foodtrex.data.model.DishesData
 import fr.isen.neu.foodtrex.databinding.ActivityCategoryBinding
 import fr.isen.neu.foodtrex.view.adapter.DishesAdapter
-import io.paperdb.Paper
 import org.json.JSONObject
 
+
+/*------------------------------------------------- CategoryActivity -----
+ |
+ |  Purpose: This data class manages the data from the API
+ |
+ *-------------------------------------------------------------------*/
 class CategoryActivity : AppCompatActivity(), ItemClickListener {
     private lateinit var binding: ActivityCategoryBinding
 
-    //can be null
+    //get category tag (with null protection)
     var category: String? = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,21 +42,22 @@ class CategoryActivity : AppCompatActivity(), ItemClickListener {
 
         binding.category.text = category
 
+        //navigation between all cateogry to display next page
         if (category == "Entrées") {
-            binding.nextDishes.text = "Voir nos plats "
+            binding.nextDishes.text = getString(R.string.see_our_main)
             binding.category.text = category
             binding.nextDishes.setOnClickListener {
                 category = "Plats"
                 apiCall(category)
 
                 if (category == "Plats") {
-                    binding.nextDishes.text = " Voir nos desserts"
+                    binding.nextDishes.text = getString(R.string.see_our_dessert)
                     binding.category.text = category
                     binding.nextDishes.setOnClickListener {
                         category = "Desserts"
                         apiCall(category)
                         if (category == "Desserts") {
-                            binding.nextDishes.text = "Accueil"
+                            binding.nextDishes.text = getString(R.string.back_home)
                             binding.category.text = category
                             binding.nextDishes.setOnClickListener {
                                 finish()
@@ -61,13 +68,13 @@ class CategoryActivity : AppCompatActivity(), ItemClickListener {
             }
         }
         if (category == "Plats") {
-            binding.nextDishes.text = "Voir nos desserts"
+            binding.nextDishes.text = getString(R.string.see_our_dessert)
             binding.category.text = category
             binding.nextDishes.setOnClickListener {
                 category = "Desserts"
                 apiCall(category)
                 if (category == "Desserts") {
-                    binding.nextDishes.text = "Accueil"
+                    binding.nextDishes.text = getString(R.string.back_home)
                     binding.category.text = category
                     binding.nextDishes.setOnClickListener {
                         finish()
@@ -76,7 +83,7 @@ class CategoryActivity : AppCompatActivity(), ItemClickListener {
             }
         }
         if (category == "Desserts") {
-            binding.nextDishes.text = "Accueil"
+            binding.nextDishes.text = getString(R.string.back_home)
             binding.nextDishes.setOnClickListener {
                 finish()
             }
@@ -89,7 +96,7 @@ class CategoryActivity : AppCompatActivity(), ItemClickListener {
     }
 
 
-    //api call using volley
+    //api call using volley to manage menu display from api
     private fun apiCall(category: String?) {
         val apiURL = "http://test.api.catering.bluecodegames.com/menu"
         val jsonObj = JSONObject()
@@ -99,7 +106,7 @@ class CategoryActivity : AppCompatActivity(), ItemClickListener {
         val queue = Volley.newRequestQueue(this)
 
         //init our json object
-        val jsonObject = JsonObjectRequest(
+        val jsonObjectRequest = JsonObjectRequest(
             Request.Method.POST, apiURL, jsonObj,
             //in case of success
             { response ->
@@ -114,7 +121,7 @@ class CategoryActivity : AppCompatActivity(), ItemClickListener {
                 Log.d("HomeActivity", "error while accessing api")
             }
         )
-        queue.add(jsonObject)
+        queue.add(jsonObjectRequest)
     }
 
 
@@ -125,7 +132,7 @@ class CategoryActivity : AppCompatActivity(), ItemClickListener {
         recyclerView.adapter = adapter
     }
 
-    override fun OnCardClickListener(dishData: DishModel) {
+    override fun onCardClickListener(dishData: DishModel) {
         val intent = Intent(this, DishDetailActivity::class.java)
         intent.putExtra("dishData", dishData)
         startActivity(intent)

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
     <item
-        android:id="@+id/home"
-        android:title="Home"
+        android:id="@+id/back"
+        android:title="Back"
         android:actionLayout="@layout/activity_dish_detail"
-        android:icon="@drawable/ic_home"/>
+        android:icon="@drawable/ic_back"/>
 
     <item
         android:id="@+id/cart"

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.FinalOrderActivity">
+
+    <LinearLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="450sp"
+            android:src="@drawable/preparing_food" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:text="@string/we_are_preparing_your_order"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/confirmOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10sp"
+            android:backgroundTint="@color/loginColor"
+            android:text="@string/confirm_order" />
+
+        <Button
+            android:id="@+id/cancelOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10sp"
+            android:backgroundTint="@color/pinkColor"
+            android:text="@string/cancel_order" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

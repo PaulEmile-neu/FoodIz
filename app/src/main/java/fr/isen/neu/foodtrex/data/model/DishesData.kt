@@ -3,6 +3,12 @@ package fr.isen.neu.foodtrex.data.model
 
 import java.io.Serializable
 
+
+/*------------------------------------------------- DishesData -----
+ |
+ |  Purpose: This data class manages the data from the API
+ |
+ *-------------------------------------------------------------------*/
 data class DishesData(var data: List<CategoryModel>) : Serializable
 
 

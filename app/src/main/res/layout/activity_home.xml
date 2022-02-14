@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="30dp"
+        android:paddingTop="20dp"
         android:paddingLeft="25dp"
         android:paddingRight="25dp">
 
@@ -20,17 +20,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/greeting"
-            android:textSize="20sp"
-            android:textColor="@color/textColor"/>
+            android:textColor="@color/textColor"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/name"
-            android:textSize="28sp"
-            android:letterSpacing="0.04"
             android:layout_below="@+id/tvGreeting"
-            android:textColor="@color/textColor"/>
+            android:letterSpacing="0.04"
+            android:text="@string/name"
+            android:id="@+id/userName"
+            android:textColor="@color/textColor"
+            android:textSize="28sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userName"
+            android:letterSpacing="0.04"
+            android:text="@string/logout"
+            android:id="@+id/logout"
+            android:textColor="@color/textColorDarken"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/orange"
+            android:textSize="15sp" />
 
       
     </RelativeLayout>
@@ -47,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Order Now"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:textStyle="bold"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="15dp"/>
@@ -58,7 +71,7 @@
             android:text="get your order\n under 3 days"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="-3dp"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
     </LinearLayout>
 
     <ScrollView

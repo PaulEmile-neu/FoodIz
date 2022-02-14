@@ -4,5 +4,5 @@ import fr.isen.neu.foodtrex.data.model.DishModel
 
 interface ItemClickListener {
 
-    fun OnCardClickListener(dishData: DishModel)
+    fun onCardClickListener(dishData: DishModel)
 }
