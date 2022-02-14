@@ -1,7 +1,7 @@
 # The project (FoodIz)
 
-During a few course at ISEN we had to develop an android application based on the Kotlin language 
-This application was a food Order application in which a customer could access some menu and order them thanks to an API
+During a few course at ISEN we had to develop an android application based on the Kotlin language.
+This application was a food Order application in which a customer could access some menu and order them thanks to an API.
 
 This application is composed of these different technologies :
 
